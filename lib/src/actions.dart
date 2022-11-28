@@ -223,7 +223,7 @@ class SlidableAction extends StatelessWidget {
           overflow: labelOverFlow,
           style: labelStyle,
           maxLines: labelMaxLines,
-          textAlign: labelAlign,
+          textAlign: labelAlign ?? TextAlign.center,
         ),
       );
     }
