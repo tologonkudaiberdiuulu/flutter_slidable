@@ -143,6 +143,7 @@ class SlidableAction extends StatelessWidget {
     this.labelStyle,
     this.labelMaxLines,
     this.labelOverFlow = TextOverflow.ellipsis,
+    this.labelAlign,
     this.borderRadius = BorderRadius.zero,
     this.padding,
   })  : assert(flex > 0),
@@ -187,6 +188,9 @@ class SlidableAction extends StatelessWidget {
   /// Text overflow of [label].
   final TextOverflow labelOverFlow;
 
+  /// Align of [label].
+  final TextAlign? labelAlign;
+
   /// Padding of the OutlinedButton
   final BorderRadius borderRadius;
 
@@ -219,6 +223,7 @@ class SlidableAction extends StatelessWidget {
           overflow: labelOverFlow,
           style: labelStyle,
           maxLines: labelMaxLines,
+          textAlign: labelAlign,
         ),
       );
     }
